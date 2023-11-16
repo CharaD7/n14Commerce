@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'n14comm',
 
-  projectId: '9h0alrs8',
+  projectId: 'pnmjuwg4',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
