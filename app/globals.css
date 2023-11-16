@@ -3,6 +3,12 @@
 @tailwind utilities;
  
 
+@layer utilities {
+  .border-color {
+    border-color: orange;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
