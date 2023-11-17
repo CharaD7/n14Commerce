@@ -1,4 +1,13 @@
 import Image from 'next/image';
+import { client } from '../lib/sanity';
+
+
+async function getData() {
+  const query = "*[ _type == 'heroImages' ][0]";
+  const data = await client.fetch(query);
+
+  return data;
+}
 
 export default function Hero() {
   return (
