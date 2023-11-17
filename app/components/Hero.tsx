@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -8,6 +9,13 @@ export default function Hero() {
           <p className="max-w-md leading-relaxed text-gray-500 xl-text-lg">
             We sell only the most exclusive and high quality products for you. We are the best so come and shop with us.
           </p>
+        </div>
+
+        {/* Images section */}
+        <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
+          <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg by-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
+            <Image />
+          </div>
         </div>
       </div>
     </section>
