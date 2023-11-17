@@ -24,10 +24,22 @@ export default async function Hero() {
 
         {/* Images section */}
         <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
+          {/* Image 1 */}
           <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg by-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
             <Image
               src={urlFor(data.image1).url()}
               alt="Great Shopping Experience"
+              className="h-full w-full object-cover object-center"
+              width={500}
+              height={500}
+            />
+          </div>
+
+          {/* Image 2 */}
+          <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+            <Image
+              src={urlFor(data.image2).url()}
+              alt="Great Items to Shop"
               className="h-full w-full object-cover object-center"
               width={500}
               height={500}

@@ -5,7 +5,7 @@
 
 @layer utilities {
   .border-color {
-    border-color: orange;
+    border-color: gray-200;
   }
 }
 
