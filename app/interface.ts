@@ -4,5 +4,5 @@ export interface simplifiedProduct {
   name: string;
   slug: string;
   categoryName: string;
-  iamgeUrl: string;
+  imageUrl: string;
 }

@@ -1,7 +1,8 @@
-import React from 'react';
 import { client } from '../lib/sanity';
 import { simplifiedProduct } from '../interface';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 async function getData() {
   const query = `
@@ -20,15 +21,35 @@ async function getData() {
 }
 
 export default async function Newest() {
-  const data: simplifiedProduct = await getData();
+  const data: simplifiedProduct[] = await getData();
 
   return (
     <div className='bg-white'>
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <div className='flex flex-between items-center'>
+
+        {/* Newest products */}
+        <div className='flex justify-between items-center'>
           <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Our Newest Products</h2>
-          <Link href="/all">See all</Link>
+          <Link href="/all" className='text-primary flex items-center gap-x-1'>See All{" "} <span><ArrowRight /></span></Link>
         </div>
+
+        {/* Products listing */}
+        <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          {data.map((product) => (
+            <div key={product._id} className='group relative'>
+              <div className='aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80'>
+                <Image
+                  src={product.imageUrl}
+                  alt='Product Image'
+                  className='w-full h-full object-cover object-center lg:h-full lg:w-full transition-transform duration-300 transform hover:scale-105'
+                  width={300}
+                  height={300}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   )
