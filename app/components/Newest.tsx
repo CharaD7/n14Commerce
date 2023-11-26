@@ -1,5 +1,6 @@
 import React from 'react';
 import { client } from '../lib/sanity';
+import { simplifiedProduct } from '../interface';
 
 async function getData() {
   const query = `
@@ -17,8 +18,6 @@ async function getData() {
   return data;
 }
 
-export default function Newest() {
-  return (
-    <div>Newest</div>
-  )
+export default async function Newest() {
+  const data: simplifiedProduct = await getData();
 }
