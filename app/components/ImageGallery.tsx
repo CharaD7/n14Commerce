@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 import { urlFor } from "../lib/sanity"
 import { useState } from "react"
@@ -31,6 +33,10 @@ export default function ImageGallery({ images }: imageProps) {
     <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4 hover:opacity-75">
       <Image
         src={urlFor(bigImage).url()}
+        alt="Selected Image large preview"
+        width={500}
+        height={500}
+        className="h-full w-full object-cover object-center"
       />
     </div>
   </div>
