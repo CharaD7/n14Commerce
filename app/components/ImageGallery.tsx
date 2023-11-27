@@ -11,6 +11,10 @@ interface imageProps {
 export default function ImageGallery({ images }: imageProps) {
   const [ bigImage, setBigImage ] = useState(images[0]);
 
+  const handleSmallImageClick = ( image: any ) => {
+    setBigImage(image);
+  };
+
   return (
   <div className="grid gap-4 lg:grid-cols-5">
 
@@ -24,6 +28,7 @@ export default function ImageGallery({ images }: imageProps) {
             height={200}
             alt="photo"
             className="h-full w-full object-cover object-center cursor-pointer"
+            onClick={() => handleSmallImageClick( image )}
           />
         </div>
       )) }
@@ -38,6 +43,9 @@ export default function ImageGallery({ images }: imageProps) {
         height={500}
         className="h-full w-full object-cover object-center"
       />
+
+      {/* Sale banner */}
+      <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">Sale</span>
     </div>
   </div>
   )
