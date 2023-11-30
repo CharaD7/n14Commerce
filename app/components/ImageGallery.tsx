@@ -45,7 +45,7 @@ export default function ImageGallery({ images }: imageProps) {
       />
 
       {/* Sale banner */}
-      <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">Sale</span>
+      <span className="absolute left-0 top-0 rounded-br-lg bg-green-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">Sale</span>
     </div>
   </div>
   )
