@@ -27,7 +27,7 @@ export default function ImageGallery({ images }: imageProps) {
             width={200}
             height={200}
             alt="photo"
-            className="h-full w-full object-cover object-center cursor-pointer"
+            className="h-full w-full object-cover object-center cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-75 hover:opacity-75"
             onClick={() => handleSmallImageClick( image )}
           />
         </div>
@@ -35,7 +35,7 @@ export default function ImageGallery({ images }: imageProps) {
     </div>
 
     {/* View for big images */}
-    <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4 hover:opacity-75">
+    <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4">
       <Image
         src={urlFor(bigImage).url()}
         alt="Selected Image large preview"
