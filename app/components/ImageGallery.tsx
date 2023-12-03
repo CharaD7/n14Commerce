@@ -39,9 +39,9 @@ export default function ImageGallery({ images }: imageProps) {
       <Image
         src={urlFor(bigImage).url()}
         alt="Selected Image large preview"
+        className="h-full w-full object-cover object-center"
         width={500}
         height={500}
-        className="h-full w-full object-cover object-center"
       />
 
       {/* Sale banner */}
