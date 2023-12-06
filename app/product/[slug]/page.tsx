@@ -63,10 +63,14 @@ export default async function ProductPage( { params }: { params: { slug: string 
               <span className="text-sm">2-4 Day Shipping</span>
             </div>
 
+            {/* Action buttons */}
             <div className="flex gap-2.5">
               <Button>Add to Bag</Button>
-              <Button>Checkout Now</Button>
+              <Button variant={"secondary"}>Checkout Now</Button>
             </div>
+
+            {/* Description */}
+            <p className="text-gray-500 mt-12 text-base tracking-wide">{ data.description }</p>
           </div>
         </div>
       </div>
