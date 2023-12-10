@@ -25,11 +25,11 @@ export default async function CategoryPage({ params, }: { params: { category: st
 
   return (
     <div className='bg-white font-sans'>
-      <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
+      <div className='mx-auto max-w-2xl sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
 
         {/* Newest products */}
         <div className='flex justify-between items-center'>
-          <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Products for Men</h2>
+          <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Our Products for {params.category}</h2>
         </div>
 
         {/* Products listing */}
