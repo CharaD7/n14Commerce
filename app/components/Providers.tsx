@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+'use client';
+
 import { CartProvider as USCProvider } from 'use-shopping-cart';
 
-export default function CardProvider({ children }: { children: ReactNode}) {
+export default function CardProvider({ children }: { children: React.ReactNode}) {
   return (
     <USCProvider
       mode="payment"
