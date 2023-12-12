@@ -8,7 +8,7 @@ import {
 export default function ShoppingCartModal() {
   return (
     <Sheet defaultOpen>
-      <SheetContent>
+      <SheetContent className="sm:max-w-lg w-[90vw]">
         <SheetHeader>
           <SheetTitle>Your Checkout</SheetTitle>
         </SheetHeader>
