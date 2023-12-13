@@ -1,4 +1,5 @@
 import { Star, Truck } from "lucide-react";
+import AddToCart from "~/app/components/AddToCart";
 import ImageGallery from "~/app/components/ImageGallery";
 import { fullProduct } from "~/app/interface";
 import { client } from "~/app/lib/sanity";
@@ -65,7 +66,7 @@ export default async function ProductPage( { params }: { params: { slug: string 
 
             {/* Action buttons */}
             <div className="flex gap-2.5">
-              <Button>Add to Bag</Button>
+              <AddToCart />
               <Button variant={"secondary"}>Checkout Now</Button>
             </div>
 
