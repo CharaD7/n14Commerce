@@ -14,7 +14,8 @@ async function getData(slug: string) {
         name,
         description,
         "slug": slug.current,
-        "categoryName": category->name
+        "categoryName": category->name,
+        price_id,
     }
   `;
 
@@ -66,7 +67,7 @@ export default async function ProductPage( { params }: { params: { slug: string 
 
             {/* Action buttons */}
             <div className="flex gap-2.5">
-              <AddToCart currency="USD" name={data.name} price={data.price} image={data.images[0]} description={data.description} key={data._id} />
+              <AddToCart currency="USD" name={data.name} price={data.price} image={data.images[0]} description={data.description} key={data._id} price_id={data.price_id} />
               <Button variant={"secondary"}>Checkout Now</Button>
             </div>
 

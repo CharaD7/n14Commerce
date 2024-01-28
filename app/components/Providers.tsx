@@ -7,7 +7,7 @@ export default function CardProvider({ children }: { children: React.ReactNode})
     <USCProvider
       mode="payment"
       cartMode="client-only"
-      stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as  string}
+      stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       currency="USD"
       successUrl="http://localhost:3000/success"
       cancelUrl="http://localhost:3000/cancel"
