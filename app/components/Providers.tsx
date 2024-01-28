@@ -9,8 +9,8 @@ export default function CardProvider({ children }: { children: React.ReactNode})
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       currency="USD"
-      successUrl="http://localhost:3000/success"
-      cancelUrl="http://localhost:3000/cancel"
+      successUrl="http://localhost:3000/stripe/success"
+      cancelUrl="http://localhost:3000/stripe/cancel"
       billingAddressCollection={true}
       shouldPersist={true}
       language="en-US"
