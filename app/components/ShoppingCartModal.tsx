@@ -43,6 +43,15 @@ export default function ShoppingCartModal() {
                           {/* Item Description */}
                           <p className="mt-1 text-sm text-gray-500 line-clamp-2">{entry.description}</p>
                         </div>
+
+                        {/* Add/Remove Item section */}
+                        <div className="flex">
+                          <button
+                            type="button"
+                            onClick={() => removeItem(entry.id)}
+                            className="font-medium text-primary hover:text-primary/80"
+                          >Remove</button>
+                        </div>
                       </div>
                     </li>
                   ))}
