@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
+import { Button } from "~/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -66,6 +67,14 @@ export default function ShoppingCartModal() {
               <p>${totalPrice}</p>
             </div>
             <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes are calculated at checkout</p>
+
+            <div className="mt-6">
+              <Button className="w-full">Checkout</Button>
+            </div>
+
+            <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+              <p>OR{" "}<button className="text-primary font-medium hover:text-primary/80" onClick={() => handleCartClick()}>Continue Shopping</button></p>
+            </div>
           </div>
 
         </div>
